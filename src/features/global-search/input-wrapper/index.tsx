@@ -4,7 +4,7 @@ import {Box} from "shared/ui/box";
 export const SearchInputWrapper = styled(Box)({
     display: "flex",
     width: "100%",
-    maxWidth: "280px",
+    maxWidth: "290px",
     backgroundColor: "#eef3f8",
     borderRadius: "0.4rem"
 })

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export type NavigationItemProps = {
+export type HeaderNavigationItemProps = {
     icon: ReactNode,
     label: string,
     count?: number,

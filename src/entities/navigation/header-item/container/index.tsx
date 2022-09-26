@@ -1,7 +1,7 @@
 import { styled } from "shared/libs/mui/styled";
 import { Box } from "shared/ui/box";
 
-export const NavigationItemContainer = styled(Box)({
+export const HeaderNavigationItemContainer = styled(Box)({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",

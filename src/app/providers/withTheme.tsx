@@ -14,6 +14,13 @@ const theme = createTheme({
                 }
             }
         },
+        MuiContainer: {
+            styleOverrides: {
+                root: {
+                    height: "100%"
+                }
+            }
+        }
     },
 });
 
