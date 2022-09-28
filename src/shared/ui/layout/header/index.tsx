@@ -1,5 +1,5 @@
 import { Box } from "shared/ui/box";
-import Container from "shared/ui/container";
+import { Container } from "shared/ui/container";
 import { LayoutHeaderProps } from "shared/ui/layout/header/types";
 
 const LayoutHeader = ({ children }: LayoutHeaderProps) => (
@@ -8,6 +8,7 @@ const LayoutHeader = ({ children }: LayoutHeaderProps) => (
         height="52px"
         position="fixed"
         top={0}
+        zIndex={100}
         bgcolor="#ffffff"
         borderBottom="1px solid rgba(0,0,0,0.08)"
     >

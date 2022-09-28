@@ -9,10 +9,9 @@ const AppStyles = () => {
             fontWeight: theme.typography.fontWeightLight,
             fontSize: theme.typography.fontSize,
             margin: theme.spacing(0),
-            height: "100vh"
+            height: "100%"
           },
           '#root': {
-            height: '100vh',
             widht: '100%'
           },
         })}

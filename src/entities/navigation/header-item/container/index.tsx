@@ -13,5 +13,5 @@ export const HeaderNavigationItemContainer = styled(Box)({
 
     '&:hover': {
         color: "#000000"
-    },
+    }
 })

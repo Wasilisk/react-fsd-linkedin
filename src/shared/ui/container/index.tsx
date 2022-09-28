@@ -1,3 +1,1 @@
-import Container from "@mui/material/Container";
-
-export default Container;
+export {Container} from "@mui/material";

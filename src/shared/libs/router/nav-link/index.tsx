@@ -7,6 +7,7 @@ export const Navlink = styled(NavLink)({
     position: "relative",
 
     "&.active:after": {
+        color: "#000000",
         borderBottom: "2px solid #000000",
         content: '""',
         bottom: 0,

@@ -1,36 +1,48 @@
-import { HeaderNavigation } from "widgets/header/navigation";
+import React from "react";
 
-import { GlobalSearch } from "features/global-search";
+import { Header } from "widgets/header";
+import { NetworkNavigation } from "widgets/network/navigation";
+import { NetworkFooter } from "widgets/network/footer";
+import { Invitations } from "widgets/network/invitations";
+import { FollowGroup } from "widgets/network/groups/follow-group";
+import { ConnectGroup } from "widgets/network/groups/connect-group";
 
-import { LinkedInIcon } from "shared/ui/icons/linkedin/linkedin";
 import { Layout } from "shared/ui/layout";
 import { Paper } from "shared/ui/paper";
-import { NetworkNavigation } from "widgets/network/navigation";
 import { Box } from "shared/ui/box";
 import { Divider } from "shared/ui/divider";
-import { NetworkFooter } from "widgets/network/footer";
+import { Grid } from "shared/ui/grid";
 
+import { networkData } from "pages/my-network/mock-data";
 
 const MyNetwork = () => (
     <Layout>
         <Layout.Header>
-            <LinkedInIcon />
-            <GlobalSearch />
-            <HeaderNavigation />
+            <Header />
         </Layout.Header>
         <Layout.Content>
-            <Box
-                display="grid"
-                gridTemplateAreas="sidebar main"
-                gridTemplateColumns="minmax(300px,7fr) minmax(0,17fr)"
-                mt={3}
-            >
-                <Paper>
-                    <NetworkNavigation />
-                    <Divider/>
-                    <NetworkFooter/>
-                </Paper>
-            </Box>
+            <Grid container mt={3}>
+                <Grid item xs={3.5}>
+                    <Paper>
+                        <NetworkNavigation />
+                        <Divider />
+                        <NetworkFooter />
+                    </Paper>
+                </Grid>
+                <Grid item xs={8.2} ml="auto" mb={3}>
+                    <Box mb={2}>
+                        {networkData.invitations && <Invitations invitations={networkData.invitations} />}
+                    </Box>
+                    <Paper>
+                        {
+                            networkData.networks.map(groupData => <React.Fragment key={groupData.id}>
+                                {groupData.type === "follow" && <FollowGroup {...groupData} />}
+                                {groupData.type === "connect" && <ConnectGroup {...groupData} />}
+                            </React.Fragment>)
+                        }
+                    </Paper>
+                </Grid>
+            </Grid>
         </Layout.Content>
     </Layout>
 )

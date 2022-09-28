@@ -6,7 +6,8 @@ export const Avatar = ({ size, ...props }: AvatarProps) => {
     const currentSize = {
         "small": "24px",
         "medium": "48px",
-        "large": "72px"
+        "large": "72px",
+        "extra-large": "102px"
     }[size]
 
     return (

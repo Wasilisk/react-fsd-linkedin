@@ -1,5 +1,5 @@
-import {Box} from "shared/ui/box";
-import Container from "shared/ui/container";
+import { Box } from "shared/ui/box";
+import { Container } from "shared/ui/container";
 import { LayoutContentProps } from "shared/ui/layout/content/types";
 
 const LayoutContent = ({ children }: LayoutContentProps) => (
